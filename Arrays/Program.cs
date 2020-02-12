@@ -13,12 +13,16 @@ namespace Arrays {
             var sum = randomnumbers[0] + randomnumbers[1] + randomnumbers[2];
             //Console.WriteLine(sum);
 
-            var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             int total = 0;
             foreach (var num in numbers) {
-                total += num*3;
-            }
+                if ((num % 3 == 0) || (num % 5 == 0)) {continue;} //if statement + {continue;} -- excludes num if divisible by 3 or 5
+                    total += num * 3;
+                }
             Console.WriteLine(total);
-            }
+
+            //Break; stops a loop when a condition is met
+            
         }
     }
+}
